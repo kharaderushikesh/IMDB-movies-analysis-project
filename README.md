@@ -1,4 +1,5 @@
-🎬 PRSQ-02 IMDB Movies Analysis (SQL Project)
+🎬 IMDB Movies Analysis (SQL Project)
+
 📘 Overview
 
 This project explores IMDb movie data using SQL to uncover insights about directors, movies, and industry trends.
