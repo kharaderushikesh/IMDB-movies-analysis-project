@@ -1,51 +1,45 @@
-# 🎬 IMDB Movies Analysis (SQL Project)
+🎬 PRSQ-02 IMDB Movies Analysis (SQL Project)
+📘 Overview
 
-## 📘 Overview
-This project explores **IMDb movie data** using SQL to uncover insights about directors, movies, and industry trends.  
-It connects to a remote SQL database, merges the `Directors` and `Movies` tables, and performs analytical queries to answer key business questions such as:
+This project explores IMDb movie data using SQL to uncover insights about directors, movies, and industry trends.
+It connects to a remote SQL database, merges the Directors and Movies tables, and performs analytical queries to answer key business questions such as:
 
-- Who are the most popular and bankable directors?
-- Which movies earned the most revenue or received the best ratings?
-- How many female directors are there in the IMDb dataset?
-  
----
+Who are the most popular and bankable directors?
 
-## 🧩 Dataset Description
+Which movies earned the most revenue or received the best ratings?
 
-### 🎥 Table 1: `Movies`
-| Column Name | Description |
-|--------------|-------------|
-| ID | Unique Movie ID |
-| Original_title | Official name of the movie |
-| Budget | Total production budget |
-| Popularity | IMDb popularity score |
-| Release_date | Release date |
-| Revenue | Total revenue generated |
-| Title | Initial working title |
-| Vote_average | Average IMDb user rating |
-| Vote_count | Total votes received |
-| Overview | Short description of the movie |
-| Tagline | Promotional tagline |
-| UID | Unique internal movie ID |
-| Director_ID | Director ID (foreign key) |
+How many female directors are there in the IMDb dataset?
 
----
+🧩 Dataset Description
+🎥 Table 1: Movies
+| Column Name    | Description                    |
+| -------------- | ------------------------------ |
+| ID             | Unique Movie ID                |
+| Original_title | Official name of the movie     |
+| Budget         | Total production budget        |
+| Popularity     | IMDb popularity score          |
+| Release_date   | Release date                   |
+| Revenue        | Total revenue generated        |
+| Title          | Initial working title          |
+| Vote_average   | Average IMDb user rating       |
+| Vote_count     | Total votes received           |
+| Overview       | Short description of the movie |
+| Tagline        | Promotional tagline            |
+| UID            | Unique internal movie ID       |
+| Director_ID    | Director ID (foreign key)      |
 
-### 🎬 Table 2: `Directors`
-| Column Name | Description |
-|--------------|-------------|
-| ID | Unique Director ID |
-| Name | Full name of the director |
-| Gender | Gender of the director (0/2 = Male, 1 = Female) |
-| Department | Department or division (e.g., Directing, Production) |
+🎬 Table 2: Directors
+| Column Name | Description                                          |
+| ----------- | ---------------------------------------------------- |
+| ID          | Unique Director ID                                   |
+| Name        | Full name of the director                            |
+| Gender      | Gender of the director (0/2 = Male, 1 = Female)      |
+| Department  | Department or division (e.g., Directing, Production) |
 
----
+🔗 Table Merging
 
-## 🔗 Table Merging
+We merge the tables using the Director_ID key:
 
-We merge the tables using the `Director_ID` key:
-
-```sql
 SELECT 
     m.Original_title,
     m.Title,
@@ -62,12 +56,7 @@ FROM movies m
 JOIN directors d
 ON m.Director_ID = d.ID;
 
----
-
 🧠 SQL Problem Queries
-
----
-
 -- Get all data about movies
 SELECT * FROM movies;
 
@@ -117,22 +106,27 @@ FROM movies m JOIN directors d ON m.Director_ID = d.ID
 GROUP BY d.Name
 ORDER BY Total_Revenue DESC LIMIT 1;
 
----
-
 📊 Insights & Findings
+Metric	Insight
+🎬 Total Movies	Shows the total number of records in IMDb dataset
+👩‍🎬 Female Directors	Measures gender diversity in film direction
+💸 Most Bankable Movie	Reveals highest-grossing films
+🏆 Highest Rated Movie	Highlights the top-rated movies after 2000
+🎥 Director with Most Movies	Identifies the most prolific filmmaker
+💰 Most Bankable Director	Indicates directors generating highest revenue
+📈 Visualization Ideas
 
----
+Use Power BI or Tableau to visualize:
 
-| Metric                       | Insight                                           |
-| ---------------------------- | ------------------------------------------------- |
-| 🎬 Total Movies              | Shows the total number of records in IMDb dataset |
-| 👩‍🎬 Female Directors       | Measures gender diversity in film direction       |
-| 💸 Most Bankable Movie       | Reveals highest-grossing films                    |
-| 🏆 Highest Rated Movie       | Highlights the top-rated movies after 2000        |
-| 🎥 Director with Most Movies | Identifies the most prolific filmmaker            |
-| 💰 Most Bankable Director    | Indicates directors generating highest revenue    |
+Top 10 Directors by Revenue
 
----
+Gender Distribution of Directors
+
+Movie Ratings vs Revenue
+
+Popularity vs Vote Average
+
+Yearly Movie Releases Trend
 
 ⚙️ Tools Used
 
@@ -141,3 +135,14 @@ ORDER BY Total_Revenue DESC LIMIT 1;
 📊 Power BI / Tableau — for data visualization
 
 💻 GitHub — for project documentation and version control
+
+
+🏁 Conclusion
+
+This SQL project demonstrates the use of data exploration and analysis techniques to extract insights from IMDb movie data.
+By merging and analyzing the Movies and Directors datasets, it identifies the most successful directors, popular movies, and key metrics such as gender distribution and audience ratings.
+
+
+🏷️ Tags
+
+#SQL #IMDb #DataAnalytics #Movies #PowerBI #Datamites #DataScience #Project
