@@ -141,27 +141,3 @@ ORDER BY Total_Revenue DESC LIMIT 1;
 📊 Power BI / Tableau — for data visualization
 
 💻 GitHub — for project documentation and version control
-
----
-🧠 Project Workflow
-
-Connect to SQL Server using provided credentials
-
-Explore movies and directors tables
-
-Clean and validate data (check for NULLs, inconsistencies)
-
-Merge both tables using Director_ID = ID
-
-Execute analytical SQL queries
-
-Interpret and summarize insights
-
-(Optional) Export to CSV for Power BI visualization
-
-Document findings in README.md
-
-🏁 Conclusion
-
-This SQL project demonstrates the use of data exploration and analysis techniques to extract insights from IMDb movie data.
-By merging and analyzing the Movies and Directors datasets, it identifies the most successful directors, popular movies, and key metrics such as gender distribution and audience ratings.
