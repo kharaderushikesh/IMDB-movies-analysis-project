@@ -1,0 +1,6 @@
+director_id,movie_count,name,id,gender,uid,department
+4763,3,Gore Verbinski,4763,2,1704,Directing
+4767,3,Sam Raimi,4767,2,7623,Directing
+4777,3,Peter Jackson,4777,2,108,Directing
+4762,2,James Cameron,4762,2,2710,Directing
+4769,2,Joss Whedon,4769,2,12891,Directing
